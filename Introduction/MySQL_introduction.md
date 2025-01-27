@@ -17,17 +17,41 @@ to perform operations like creaate, update delete amd insert data in the data ba
 ##Data base lanuages:
     - Data Definition language(DDL):
         DDL commands are used to create, modifi and delete the structure of data base.
+
             * Drop   : Drop is a command used to delete the entair table structure or data base.
+                Syntax: Drop database databade_name;
+                        Drop table table_name;
+
             * Create : Create command is used to crete object whit the  table or a data base.
+                Syntax: create database database_name;
+                        create table table_name column_names datatype;
+                    
             * Alter  : Alter is a command used for modofing the structure of the data base or a table.
+                Syntax: Alter table table_name ADD column_name datatype;
+                        Alter table table-name DROP column column_name;
+                        Alter table table_name MODIFY column column_name datatype;
+
             * Truncate: Truncate command is used to remove all the records from the table.
+                Syntax: Truncate table table_name;
+
             * Rename : Rename command is used to rename the objects or tables.
+                Syntax: Rename old_tablename To new_tablename.
+
+
     - Data Manipulation language(DML):
         DML commands are used to manipulate or modify thde data in the data base or tables.
             * Select: Select is a command used to retrive data from the data base.
+                Syntax: select * from table_name
+
             * Insert: Insert command is used to insert data in the table.
+                Syntax: insert into table_name(column_names)vales(column_values);
+
             * Update: Update is a command used to update existing data in the table.
+                Syntax: Update table_name SET [column_name= value] [WHERE condition]  
+
             * Delete: Delete command is used to delete all the records from the table.
+                Syntax: delete table_name ;
+                        delete table_name WHERE condition ;
 
 ##Keys in DBMS:
     Keys in DBMS are used for easily accessing of data and for unique indentifying of records.
