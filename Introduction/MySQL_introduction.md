@@ -62,10 +62,34 @@ to perform operations like creaate, update delete amd insert data in the data ba
 ##Constrains:
     Constrains are used to apply certain conditions on data in database.
     * Not null - If a column is pecified as NOT NULL then we cannot give null values to a specified column.
+        Syntax - create table table_name( column_names data type NOT NULL); --NOT NULL while creating table
+                 alter table table_name modify column( column_name data type NOT NULL); NOT NULL adding after creating table
     * Unique   - Unique constrain is used to specify that the coloum should be unique and the values should not be repeted.
+        Syntax - create table table_name( column_name data type UNIQUE); --UNIQUE constrain while creating table.
+                 alter table add constrain UNIQUE(column_name); --UNIQUE constrain after creating table.
     * Primary key - It uniquely defines column or columns in a table and unique identifing of each row.
+        Syntax - create table table_name( column_name data type PRIMARY KEY); --PRIMARY KEY while creating table
+                 alter table add constrain PRIMARY KEY(column_name); --PRIMARY KEY after creating table.
     * Foreign key - Foreign key is a key constrain which defines as primary key in one table and becomes foreign key in a table.
+        Syntax - create table table_name( column_name)
+                 FOREIN KEY(column_name)references reference_table_name(referenc_column);
+                 alter table table_name add constrain
+                FOREIN KEY(column_name)references reference_table_name(referenc_column);
     * Check   - Check constrain is used to check the condition to meet a particular condition.
+        Syntax - create table table_name(column_name datatype , column_name data type CHECK(condition));
     * Default - Default constrain is to fill te colum with the default value when it is not given a value.
-    
-  #gdd
+        Syntax - create table table_name(column_name data type, column_name data type DEFAULT(default_value));
+    *Enum     - Enum constrain is used when we need to add or enter some particular values in the respected column.
+        Syntax - create table table_name(column_name data type, column_name data type ENUM(value_1,..,value_n))
+    * Indux - Indux constrain is used for easy retrival of values from tables. Index gives row id to each row in the table.
+        Syntax - create INDUX idx_name on table_name(column_name);
+
+    - Data Querying Language(DQL):
+        DQL are used to perform querries on databases to retrive data using diffrentSELECT statements.
+        Only select command is used in this DQL.
+        Syntax - SELECT * from table_names;
+                 SELECT column_name1, column_name2 from table_name WHERE (condition);
+
+
+
+  
